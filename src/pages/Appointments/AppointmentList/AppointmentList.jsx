@@ -27,7 +27,7 @@ const AppointmentList = () => {
         return;
       }
 
-      const response = await axios.get('/api/patients/appointments', {
+      const response = await axios.get('https://health-management-backend.onrender.com/api/patients/appointments', {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -65,7 +65,7 @@ const AppointmentList = () => {
 
     try {
       const token = localStorage.getItem('token');
-      await axios.delete(`/api/patients/appointments/${id}`, {
+      await axios.delete(`https://health-management-backend.onrender.com/api/patients/appointments/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
