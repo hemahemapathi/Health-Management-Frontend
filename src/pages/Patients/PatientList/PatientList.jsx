@@ -29,7 +29,7 @@ const PatientList = () => {
         return;
       }
 
-      const response = await axios.get(`https://health-management-backend.onrender.com/api/patients?page=${currentPage}&filter=${filter}`, {
+      const response = await axios.get(`/api/patients?page=${currentPage}&filter=${filter}`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
