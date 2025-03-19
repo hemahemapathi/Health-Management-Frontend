@@ -32,14 +32,14 @@ export const UserProvider = ({ children }) => {
         if (!token) return;
 
         // Fetch user profile
-        const userResponse = await axios.get('/api/users/profile', {
+        const userResponse = await axios.get('https://health-management-backend.onrender.com/api/users/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
         setUserProfile(userResponse.data);
 
         // If user is a doctor, fetch doctor profile
         if (currentUser.role === 'doctor') {
-          const doctorResponse = await axios.get(`/api/doctors/user/${currentUser._id}`, {
+          const doctorResponse = await axios.get(`https://health-management-backend.onrender.com/api/doctors/user/${currentUser._id}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           setDoctorProfile(doctorResponse.data);
@@ -47,7 +47,7 @@ export const UserProvider = ({ children }) => {
 
         // If user is a patient, fetch patient profile
         if (currentUser.role === 'patient') {
-          const patientResponse = await axios.get(`/api/patients/user/${currentUser._id}`, {
+          const patientResponse = await axios.get(`https://health-management-backend.onrender.com/api/patients/user/${currentUser._id}`, {
             headers: { Authorization: `Bearer ${token}` }
           });
           setPatientProfile(patientResponse.data);
@@ -70,7 +70,7 @@ export const UserProvider = ({ children }) => {
       setError(null);
       
       const token = localStorage.getItem('token');
-      const response = await axios.put(`/api/doctors/${doctorId}`, profileData, {
+      const response = await axios.put(`https://health-management-backend.onrender.com/api/doctors/${doctorId}`, profileData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -91,7 +91,7 @@ export const UserProvider = ({ children }) => {
       setError(null);
       
       const token = localStorage.getItem('token');
-      const response = await axios.put(`/api/patients/${patientId}`, profileData, {
+      const response = await axios.put(`https://health-management-backend.onrender.com/api/patients/${patientId}`, profileData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -112,7 +112,7 @@ export const UserProvider = ({ children }) => {
       setError(null);
       
       const token = localStorage.getItem('token');
-      const response = await axios.put(`/api/doctors/${doctorId}/availability`, { availability }, {
+      const response = await axios.put(`https://health-management-backend.onrender.com/api/doctors/${doctorId}/availability`, { availability }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
