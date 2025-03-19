@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
           return;
         }
 
-        const response = await axios.get('https://health-management-backend.onrender.com/api/auth/verify', {
+        const response = await axios.get('/api/auth/verify', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -46,7 +46,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (email, password) => {
     try {
       setError(null);
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/login', { email, password });
+      const response = await axios.post('/api/auth/login', { email, password });
       
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
@@ -78,7 +78,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (userData) => {
     try {
       setError(null);
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/register', userData);
+      const response = await axios.post('/api/auth/register', userData);
       
       if (response.data.success) {
         return response.data;
@@ -103,7 +103,7 @@ export const AuthProvider = ({ children }) => {
   const requestPasswordReset = async (email) => {
     try {
       setError(null);
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/forgot-password', { email });
+      const response = await axios.post('/api/auth/forgot-password', { email });
       return response.data;
     } catch (err) {
       setError(err.response?.data?.message || 'Failed to request password reset');
@@ -115,7 +115,7 @@ export const AuthProvider = ({ children }) => {
   const resetPassword = async (token, newPassword) => {
     try {
       setError(null);
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/reset-password', { 
+      const response = await axios.post('/api/auth/reset-password', { 
         token, 
         password: newPassword 
       });
@@ -132,7 +132,7 @@ export const AuthProvider = ({ children }) => {
       setError(null);
       const token = localStorage.getItem('token');
       
-      const response = await axios.put('https://health-management-backend.onrender.com/api/users/profile', userData, {
+      const response = await axios.put('/api/users/profile', userData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
