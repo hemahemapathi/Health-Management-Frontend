@@ -27,7 +27,7 @@ const PrescriptionList = () => {
         return;
       }
 
-      const response = await axios.get('https://health-management-backend.onrender.com/api/prescriptions', {
+      const response = await axios.get('/api/prescriptions', {
         headers: {
           Authorization: `Bearer ${token}`
         }
