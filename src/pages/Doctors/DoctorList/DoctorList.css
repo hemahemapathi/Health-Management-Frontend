@@ -1,0 +1,175 @@
+.doctor-list-container {
+    padding: 20px;
+  }
+  
+  .section-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-description {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+  }
+  
+  .search-container, .filter-container {
+    margin-bottom: 20px;
+  }
+  
+  .search-icon-container, .filter-icon-container {
+    background-color: #f8f9fa;
+    border-right: none;
+  }
+  
+  .search-input, .filter-select {
+    border-left: none;
+  }
+  
+  .doctor-card {
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .doctor-header {
+    display: flex;
+    margin-bottom: 15px;
+  }
+  
+  .doctor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 15px;
+    background-color: #f8f9fa;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6c757d;
+    background-color: #e9ecef;
+  }
+  
+  .doctor-info {
+    flex: 1;
+  }
+  
+  .doctor-name {
+    margin-bottom: 5px;
+    color: #2c3e50;
+  }
+  
+  .doctor-specialization {
+    font-size: 0.9rem;
+    color: #6c757d;
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .doctor-rating {
+    display: flex;
+    align-items: center;
+  }
+  
+  .star-icon {
+    color: #ffc107;
+  }
+  
+  .doctor-details {
+    margin: 15px 0;
+    padding: 15px 0;
+    border-top: 1px solid #e9ecef;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .detail-item {
+    margin-bottom: 10px;
+  }
+  
+  .detail-label {
+    font-weight: 500;
+    color: #495057;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .detail-value {
+    color: #6c757d;
+  }
+  
+  .qualifications-list, .availability-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-top: 5px;
+  }
+  
+  .qualification-badge, .availability-badge {
+    font-size: 0.8rem;
+    font-weight: normal;
+  }
+  
+  .doctor-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .view-profile-btn, .book-appointment-btn {
+    flex: 1;
+  }
+  
+  .view-profile-btn {
+    margin-right: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .doctor-list-container {
+      padding: 10px;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+    }
+    
+    .section-description {
+      font-size: 0.9rem;
+    }
+    
+    .doctor-actions {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .view-profile-btn {
+      margin-right: 0;
+      margin-bottom: 10px;
+    }
+  }
+  

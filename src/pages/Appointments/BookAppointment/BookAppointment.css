@@ -1,0 +1,85 @@
+.book-appointment-container {
+    padding: 20px;
+  }
+  
+  .booking-card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  .section-title {
+    color: #2c3e50;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-label {
+    color: #2c3e50;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-input {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .reason-textarea {
+    resize: none;
+  }
+  
+  .time-slots-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .time-slot-option {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .time-slot-option:hover {
+    background-color: #e9ecef;
+  }
+  
+  .time-slot-option input:checked + label {
+    font-weight: bold;
+    color: #007bff;
+  }
+  
+  .book-btn {
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  
+  .cancel-btn {
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  
+  @media (max-width: 768px) {
+    .book-appointment-container {
+      padding: 10px;
+    }
+    
+    .time-slots-container {
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    }
+  }
+  

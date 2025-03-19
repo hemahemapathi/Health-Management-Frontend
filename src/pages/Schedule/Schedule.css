@@ -1,0 +1,100 @@
+.schedule-container {
+    padding: 20px;
+  }
+  
+  .section-title {
+    color: #2c3e50;
+    font-weight: 600;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .section-description {
+    color: #7f8c8d;
+    margin-bottom: 25px;
+  }
+  
+  .schedule-card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+    overflow: hidden;
+  }
+  
+  .add-slot-form {
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 10px;
+  }
+  
+  .availability-table-container {
+    overflow-x: auto;
+  }
+  
+  .availability-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  
+  .availability-table th {
+    background-color: #f8f9fa;
+    color: #495057;
+    font-weight: 600;
+    padding: 12px 15px;
+  }
+  
+  .availability-table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-bottom: 1px solid #e9ecef;
+  }
+  
+  .day-column {
+    font-weight: 500;
+    color: #343a40;
+    width: 120px;
+  }
+  
+  .time-slots-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .time-slot-item {
+    display: inline-flex;
+    align-items: center;
+    background-color: #e9ecef;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    color: #495057;
+    margin-right: 10px;
+    margin-bottom: 5px;
+  }
+  
+  .remove-slot-btn {
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+  
+  @media (max-width: 768px) {
+    .schedule-container {
+      padding: 10px;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+    }
+    
+    .section-description {
+      font-size: 0.9rem;
+    }
+    
+    .day-column {
+      width: 90px;
+    }
+  }
+  

@@ -1,0 +1,152 @@
+.create-prescription-container {
+    padding: 20px;
+  }
+  
+  .prescription-card {
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    border: none;
+  }
+  
+  .section-title {
+    color: #2c3e50;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-label {
+    color: #2c3e50;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+  }
+  
+  .form-input {
+    border-radius: 8px;
+    padding: 12px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-input:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
+  .medications-section {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .medication-card {
+    border-radius: 10px;
+    border: 1px solid #e0e0e0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .medication-card:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .medication-number {
+    font-size: 1.1rem;
+    color: #495057;
+    margin-bottom: 15px;
+  }
+  
+  .notes-textarea {
+    resize: vertical;
+    min-height: 100px;
+  }
+  
+  .create-btn {
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  
+  .cancel-btn {
+    padding: 12px;
+    font-weight: 600;
+    border-radius: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .create-prescription-container {
+      padding: 10px;
+    }
+    
+    .section-title {
+      font-size: 1.5rem;
+    }
+    
+    .medication-card {
+      margin-bottom: 15px;
+    }
+    
+    .form-label {
+      font-size: 0.9rem;
+    }
+  }
+  
+  /* Animation for adding new medication */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .medication-card {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+  
+  /* Styling for required fields */
+  .form-control:required {
+    border-left: 3px solid #007bff;
+  }
+  
+  /* Styling for optional fields */
+  .form-control:not(:required) {
+    border-left: 3px solid #6c757d;
+  }
+  
+  /* Better focus styles for accessibility */
+  .form-control:focus, 
+  .form-select:focus, 
+  .btn:focus {
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+    outline: none;
+  }
+  
+  /* Styling for the medication instructions */
+  .medication-instructions {
+    font-style: italic;
+    color: #6c757d;
+  }
+  
+  /* Styling for date inputs */
+  input[type="date"].form-input {
+    padding: 10px 12px;
+  }
+  
+  /* Styling for select inputs */
+  .form-select {
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #e0e0e0;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .form-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+  }
+  
