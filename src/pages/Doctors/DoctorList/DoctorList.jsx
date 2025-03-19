@@ -29,7 +29,7 @@ const DoctorList = () => {
 
   const fetchSpecializations = async () => {
     try {
-      const response = await axios.get('https://health-management-backend.onrender.com/api/doctors/specializations');
+      const response = await axios.get('/api/doctors/specializations');
       // Ensure specializations is always an array
       setSpecializations(Array.isArray(response.data) ? response.data : []);
     } catch (err) {
@@ -42,7 +42,7 @@ const DoctorList = () => {
     try {
       setLoading(true);
       
-      let url = `https://health-management-backend.onrender.com/api/doctors?page=${page}&limit=9`;
+      let url = `/api/doctors?page=${page}&limit=9`;
       if (spec) url += `&specialization=${spec}`;
       if (search) url += `&search=${search}`;
       
