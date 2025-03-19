@@ -37,7 +37,7 @@ const Schedule = () => {
 
       try {
         // Get the doctor profile directly
-        const doctorResponse = await axios.get('https://health-management-backend.onrender.com/api/doctors/profile', {
+        const doctorResponse = await axios.get('/api/doctors/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -50,7 +50,7 @@ const Schedule = () => {
         }
 
         // Fetch doctor's availability
-        const availabilityResponse = await axios.get(`https://health-management-backend.onrender.com/api/doctors/${doctorId}/availability`, {
+        const availabilityResponse = await axios.get(`/api/doctors/${doctorId}/availability`, {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -143,7 +143,7 @@ const Schedule = () => {
       const token = localStorage.getItem('token');
       
       // Get the doctor ID from the user profile
-      const userResponse = await axios.get('https://health-management-backend.onrender.com/api/users/profile', {
+      const userResponse = await axios.get('/api/users/profile', {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -156,7 +156,7 @@ const Schedule = () => {
       }
 
       // Update availability
-      await axios.put(`https://health-management-backend.onrender.com/api/doctors/${doctorId}/availability`, 
+      await axios.put(`/api/doctors/${doctorId}/availability`, 
         { availability }, 
         { headers: { Authorization: `Bearer ${token}` } }
       );
