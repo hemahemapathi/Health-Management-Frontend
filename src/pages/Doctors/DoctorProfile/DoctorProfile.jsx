@@ -44,12 +44,12 @@ const DoctorProfile = () => {
       
       if (isDoctorDashboard) {
         // If we're in the doctor dashboard, fetch the doctor's own profile
-        response = await axios.get('https://health-management-backend.onrender.com/api/doctors/profile', {
+        response = await axios.get('/api/doctors/profile', {
           headers: { Authorization: `Bearer ${token}` }
         });
       } else if (id) {
         // If we have an ID parameter, fetch that specific doctor
-        response = await axios.get(`https://health-management-backend.onrender.com/api/doctors/${id}`, {
+        response = await axios.get(`/api/doctors/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
       } else {
@@ -74,7 +74,7 @@ const DoctorProfile = () => {
       
       const doctorId = isDoctorDashboard ? doctor._id : id;
       
-      const response = await axios.get(`https://health-management-backend.onrender.com/api/doctors/${doctorId}/available-slots`, {
+      const response = await axios.get(`/api/doctors/${doctorId}/available-slots`, {
         params: { date: selectedDate },
         headers: token ? { Authorization: `Bearer ${token}` } : {}
       });
