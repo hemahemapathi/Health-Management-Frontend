@@ -19,7 +19,7 @@ const useAuth = () => {
           return;
         }
 
-        const response = await axios.get('https://health-management-backend.onrender.com/api/auth/verify', {
+        const response = await axios.get('/api/auth/verify', {
           headers: { Authorization: `Bearer ${token}` }
         });
 
@@ -47,7 +47,7 @@ const useAuth = () => {
       setError(null);
       setLoading(true);
       
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/login', { email, password });
+      const response = await axios.post('/api/auth/login', { email, password });
       
       if (response.data.success) {
         localStorage.setItem('token', response.data.token);
@@ -83,7 +83,7 @@ const useAuth = () => {
       setError(null);
       setLoading(true);
       
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/register', userData);
+      const response = await axios.post('/api/auth/register', userData);
       
       if (response.data.success) {
         // Optionally auto-login after registration
@@ -121,7 +121,7 @@ const useAuth = () => {
         return null;
       }
       
-      const response = await axios.put('https://health-management-backend.onrender.com/api/users/profile', userData, {
+      const response = await axios.put('/api/users/profile', userData, {
         headers: { Authorization: `Bearer ${token}` }
       });
       
@@ -146,7 +146,7 @@ const useAuth = () => {
       setError(null);
       setLoading(true);
       
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/forgot-password', { email });
+      const response = await axios.post('/api/auth/forgot-password', { email });
       
       if (response.data.success) {
         return response.data;
@@ -168,7 +168,7 @@ const useAuth = () => {
       setError(null);
       setLoading(true);
       
-      const response = await axios.post('https://health-management-backend.onrender.com/api/auth/reset-password', { 
+      const response = await axios.post('/api/auth/reset-password', { 
         token, 
         password: newPassword 
       });
