@@ -57,9 +57,9 @@ const DoctorDashboard = () => {
         
         // You would replace these with your actual API endpoints
         const [patientsRes, appointmentsRes, prescriptionsRes] = await Promise.all([
-          axios.get('https://health-management-backend.onrender.com/api/patients/count', { headers }),
-          axios.get('https://health-management-backend.onrender.com/api/appointments/doctor', { headers }),
-          axios.get('https://health-management-backend.onrender.com/api/prescriptions/pending', { headers })
+          axios.get('/api/patients/count', { headers }),
+          axios.get('/api/appointments/doctor', { headers }),
+          axios.get('/api/prescriptions/pending', { headers })
         ]);
         
         // Process the data
